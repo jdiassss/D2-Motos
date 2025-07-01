@@ -10,6 +10,7 @@
   <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
@@ -90,13 +91,15 @@
       <div class="column is-one-third">
         <div class="card">
           <div class="card-image">
-            <figure>
+            <figure class="image">
               <img src="images/motos-a-venda/moto1.jpg" alt="Moto 1">
             </figure>
           </div>
           <div class="card-content">
-            <p class="title is-5">Honda CB500X</p>
-            <p>Uma moto econômica, ideal para o dia a dia. Excelente desempenho e conforto.</p>
+            <p class="title is-5 mb-2">Honda CB500X</p>
+            <p class="has-text-danger has-text-weight-bold is-size-5 mb-1">R$ 32.900</p>
+            <p class="is-size-7 has-text-grey mb-3"><i class="fas fa-tachometer-alt"></i> 18.000 km rodados</p>
+            <p class="is-size-6">Uma moto econômica, ideal para o dia a dia. Excelente desempenho e conforto.</p>
           </div>
         </div>
       </div>
@@ -105,13 +108,15 @@
       <div class="column is-one-third">
         <div class="card">
           <div class="card-image">
-            <figure>
+            <figure class="image">
               <img src="images/motos-a-venda/moto2.jpg" alt="Moto 2">
             </figure>
           </div>
           <div class="card-content">
-            <p class="title is-5">Honda Twister 250</p>
-            <p>Potência e estilo em uma só moto. Ideal para quem busca desempenho.</p>
+            <p class="title is-5 mb-2">Honda Twister 250</p>
+            <p class="has-text-danger has-text-weight-bold is-size-5 mb-1">R$ 19.500</p>
+            <p class="is-size-7 has-text-grey mb-3"><i class="fas fa-tachometer-alt"></i> 12.000 km rodados</p>
+            <p class="is-size-6">Potência e estilo em uma só moto. Ideal para quem busca desempenho.</p>
           </div>
         </div>
       </div>
@@ -120,167 +125,90 @@
       <div class="column is-one-third">
         <div class="card">
           <div class="card-image">
-            <figure>
+            <figure class="image">
               <img src="images/motos-a-venda/moto3.jpg" alt="Moto 3">
             </figure>
           </div>
           <div class="card-content">
-            <p class="title is-5">Sahara Adventure 300</p>
-            <p>Visual agressivo e tecnologia de ponta. A escolha dos exigentes.</p>
+            <p class="title is-5 mb-2">Sahara Adventure 300</p>
+            <p class="has-text-danger has-text-weight-bold is-size-5 mb-1">R$ 35.900</p>
+            <p class="is-size-7 has-text-grey mb-3"><i class="fas fa-tachometer-alt"></i> 5.000 km rodados</p>
+            <p class="is-size-6">Visual agressivo e tecnologia de ponta. A escolha dos exigentes.</p>
           </div>
         </div>
-      </div>      
+      </div>
+    </div>
+
+    <!-- Botões -->
+    <div class="has-text-centered mt-4">
+      <button id="btnVerMais" class="button is-danger is-medium" onclick="mostrarMaisMotos()">
+        Ver todas motos
+      </button>
+      <button id="btnVerMenos" class="button is-dark is-medium" onclick="ocultarMaisMotos()" style="display: none;">
+        Ver menos
+      </button>
     </div>
   </div>
 
-  
-
-  <div class="has-text-centered mt-4">
-    <button id="btnVerMais" class="button is-medium" onclick="mostrarMaisMotos()">
-      Ver todas motos
-    </button>
-  
-    <button id="btnVerMenos" class="button is-medium" onclick="ocultarMaisMotos()" style="display: none;">
-      Ver menos
-    </button>
-  </div>
-  
-  
-  
-
+  <!-- Seção oculta com mais motos -->
   <section id="maisMotos" class="section" style="display: none;">
     <div class="container">
       <h2 class="title has-text-centered">Outras motos disponíveis</h2>
-  
       <div class="columns is-multiline">
         <!-- Card 4 -->
         <div class="column is-one-third">
           <div class="card">
             <div class="card-image">
-              <figure>
+              <figure class="image">
                 <img src="images/motos-a-venda/moto4.jpg" alt="Moto 4">
               </figure>
             </div>
             <div class="card-content">
-              <p class="title is-5">Yamaha Fazer 250</p>
-              <p>Design esportivo e excelente desempenho urbano.</p>
+              <p class="title is-5 mb-2">Yamaha Fazer 250</p>
+              <p class="has-text-danger has-text-weight-bold is-size-5 mb-1">R$ 22.000</p>
+              <p class="is-size-7 has-text-grey mb-3"><i class="fas fa-tachometer-alt"></i> 10.500 km rodados</p>
+              <p class="is-size-6">Design esportivo e excelente desempenho urbano.</p>
             </div>
           </div>
         </div>
-  
+
         <!-- Card 5 -->
         <div class="column is-one-third">
           <div class="card">
             <div class="card-image">
-              <figure>
+              <figure class="image">
                 <img src="images/motos-a-venda/moto5.jpg" alt="Moto 5">
               </figure>
             </div>
             <div class="card-content">
-              <p class="title is-5">BMW G 310R</p>
-              <p>Alta tecnologia com visual agressivo. Ideal para a cidade.</p>
+              <p class="title is-5 mb-2">BMW G 310R</p>
+              <p class="has-text-danger has-text-weight-bold is-size-5 mb-1">R$ 27.800</p>
+              <p class="is-size-7 has-text-grey mb-3"><i class="fas fa-tachometer-alt"></i> 8.000 km rodados</p>
+              <p class="is-size-6">Alta tecnologia com visual agressivo. Ideal para a cidade.</p>
             </div>
           </div>
         </div>
-  
+
         <!-- Card 6 -->
         <div class="column is-one-third">
           <div class="card">
             <div class="card-image">
-              <figure>
+              <figure class="image">
                 <img src="images/motos-a-venda/moto6.jpg" alt="Moto 6">
               </figure>
             </div>
             <div class="card-content">
-              <p class="title is-5">XRE 300 Rally</p>
-              <p>Pronta para o asfalto e para a aventura.</p>
+              <p class="title is-5 mb-2">XRE 300 Rally</p>
+              <p class="has-text-danger has-text-weight-bold is-size-5 mb-1">R$ 23.500</p>
+              <p class="is-size-7 has-text-grey mb-3"><i class="fas fa-tachometer-alt"></i> 20.000 km rodados</p>
+              <p class="is-size-6">Pronta para o asfalto e para a aventura.</p>
             </div>
           </div>
         </div>
-  
-        <!-- Card 7 -->
-        <div class="column is-one-third">
-          <div class="card">
-            <div class="card-image">
-              <figure>
-                <img src="images/motos-a-venda/moto7.jpg" alt="Moto 7">
-              </figure>
-            </div>
-            <div class="card-content">
-              <p class="title is-5">XRE 300 Rally</p>
-              <p>Pronta para o asfalto e para a aventura.</p>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- Card 8 -->
-        <div class="column is-one-third">
-          <div class="card">
-            <div class="card-image">
-              <figure>
-                <img src="images/motos-a-venda/moto8.jpg" alt="Moto 8">
-              </figure>
-            </div>
-            <div class="card-content">
-              <p class="title is-5">XRE 300 Rally</p>
-              <p>Pronta para o asfalto e para a aventura.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 9 -->
-        <div class="column is-one-third">
-          <div class="card">
-            <div class="card-image">
-              <figure>
-                <img src="images/motos-a-venda/moto9.jpg" alt="Moto 9">
-              </figure>
-            </div>
-            <div class="card-content">
-              <p class="title is-5">XRE 300 Rally</p>
-              <p>Pronta para o asfalto e para a aventura.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 10 -->
-        <div class="column is-one-third">
-          <div class="card">
-            <div class="card-image">
-              <figure>
-                <img src="images/motos-a-venda/moto10.jpg" alt="Moto 10">
-              </figure>
-            </div>
-            <div class="card-content">
-              <p class="title is-5">XRE 300 Rally</p>
-              <p>Pronta para o asfalto e para a aventura.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Card 11 -->
-        <div class="column is-one-third">
-          <div class="card">
-            <div class="card-image">
-              <figure>
-                <img src="images/motos-a-venda/moto11.jpg" alt="Moto 11">
-              </figure>
-            </div>
-            <div class="card-content">
-              <p class="title is-5">XRE 300 Rally</p>
-              <p>Pronta para o asfalto e para a aventura.</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Adicionar mais motos-->
 
       </div>
     </div>
   </section>
-  
-
 </section>
 
 <!-- Seção do mapa -->
